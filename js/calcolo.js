@@ -56,7 +56,7 @@ function errore(num, iterazioni){
     Qprec = num / 2;
     for(n = 0; n < iterazioni && !esci; n++){
         Q = (Qprec + num / Qprec) / 2;
-        errore = fabs((Q - Qprec) / Q);
+        errore = Math.abs((Q - Qprec) / Q);
         if(errore < EPS) {
             esci = 1;
         } else {
