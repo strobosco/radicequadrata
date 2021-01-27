@@ -31,6 +31,7 @@ input {
     outline: none;
     background-color: #ecebeb;
     border-radius: 5px;
+    width: fit-content;
 }
 
 button {
