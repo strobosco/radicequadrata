@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>Calcolo Approssimativo della Radice Quadrata</title>
+
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="calcolo.js"></script>
+
+    </head>
+    <body>
+
+        <div class="maindiv">
+
+            <h1 id="header">Calcolo Approssimativo della Radice Quadrata</h1>
+            <br>
+            <p>Per calcolare la radice quadrata useremo i seguenti metodi:</p>
+            <ol>
+                <li>Metodo Babilonese</li> <br>
+                <li>Metodo con controllo errore</li> <br>
+                <li>Algoritmo Ricorsivo</li> <br>
+            </ol>
+
+        </div>
+        <div class="data">
+
+            <h2>E' necessario inserire i seguenti dati:</h2>
+            <ul>
+                <li>Radicando</li> <br>
+                <li>Numero di ripetizioni massime</li> <br>
+            </ul>
+
+            <input type="number" id="radicando" placeholder="Radicando"> <br><br>
+            <input type="number" id="ripetizioni" placeholder="Ripetizioni"> <br><br>
+            <input type="text" list="metodi" id="metodo" placeholder="Metodo">
+            <datalist id="metodi">
+                <option value="Metodo Babilonese"></option>
+                <option value="Metodo con controllo errore"></option>
+                <option value="Algortimo Ricorsivo"></option>
+            </datalist> <br><br>
+            
+
+        </div>
+        <div class="risultato">
+
+            Radice: <span id="risultato"></span>
+            <br><br>
+
+            <button onclick="compute()">Calcola Radice Approssimata</button>
+
+        </div>
+
+
+    </body>
+</html>
