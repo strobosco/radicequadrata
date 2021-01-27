@@ -89,6 +89,7 @@ function tabella(){
                         break;
 
                     case 3:
+
                         td.innerHTML = Math.sqrt(radicando);
                         tr.appendChild(td);
                 }
