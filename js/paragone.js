@@ -87,7 +87,7 @@ function tabella(){
                         break;
 
                     case 3:
-                        td.innerHTML = 0;
+                        td.innerHTML = Math.sqrt(9);
                         tr.appendChild(td);
                 }
                 
