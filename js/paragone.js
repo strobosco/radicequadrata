@@ -72,7 +72,7 @@ function tabella(){
                 switch(j){
 
                     case 0:
-                        td.innerHTML = i;
+                        td.innerHTML = i + 1;
                         tr.appendChild(td);
                         break;
                     
