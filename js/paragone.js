@@ -58,6 +58,7 @@ function tabella(){
     var radicando = document.getElementById("radicando").value;
 
     var table = document.getElementById("tabella");
+    document.getElementsByTagName("tbody").innerHTML="";
     var body = document.createElement('tbody');
 
     for(var i = 0; i < confronti; i++){
