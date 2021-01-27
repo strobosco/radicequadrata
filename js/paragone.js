@@ -1,5 +1,5 @@
 window.onload = function(){
-    alert("Tutti i sistemi funzionano");
+    //alert("Tutti i sistemi funzionano");
 }
 
 const EPS = 0.00001;
@@ -53,17 +53,19 @@ function ricorsivo(a, x1){ // algortimo ricorsivo da rivedere
 
 function tabella(){
 
-    var iterazioni = document.getElementById("selezione").value;
+    var confronti = document.getElementById("selezione").value;
+    var iterazioni = document.getElementById("iterazioni").value;
+    var radicando = document.getElementById("radicando").value;
 
     var table = document.getElementById("tabella");
     var body = document.createElement('tbody');
 
-    for(var i = 0; i < iterazioni; i++){
+    for(var i = 0; i < confronti; i++){
 
         var tr = document.createElement("tr");
         for(var j = 0; j < 4; j++){
 
-            if (i == (iterazioni) && j == 3) {
+            if (i == (confronti) && j == 3) {
                 break;
             }
             else {
@@ -72,22 +74,22 @@ function tabella(){
                 switch(j){
 
                     case 0:
-                        td.innerHTML = i;
+                        td.innerHTML = i + 1;
                         tr.appendChild(td);
                         break;
                     
                     case 1:
-                        td.innerHTML = Babilonese(9, 100);
+                        td.innerHTML = Babilonese(radicando, iterazioni);
                         tr.appendChild(td);
                         break;
                     
                     case 2:
-                        td.innerHTML = errore(9, 100);
+                        td.innerHTML = errore(radicando, iterazioni);
                         tr.appendChild(td);
                         break;
 
                     case 3:
-                        td.innerHTML = 0;
+                        td.innerHTML = Math.sqrt(radicando);
                         tr.appendChild(td);
                 }
                 
