@@ -1,12 +1,11 @@
 body {
     background-color: black;
-    font: Arial;
+    font-family: Arial, Helvetica, sans-serif;
     color: white;
 }
 
 h1, h2 {
     color: rgb(30, 187, 30);
-    font: Arial;
 }
 
 div {
@@ -22,8 +21,12 @@ div {
 
 }
 
+p {
+    font: Arial;
+}
+
 li {
-    display: inline-block;
+    display: block;
 }
 
 input {
@@ -44,7 +47,11 @@ button {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-  }
+}
+
+button:hover {
+    background-color: rgb(30, 215, 30);
+}
 
 table, th, td {
     margin: auto;
@@ -67,4 +74,23 @@ th, td {
     text-align: center;
     margin: 10px auto;
 
+}
+
+a.bottone-paragone {
+    display:inline-block;
+    padding:0.3em 1.2em;
+    margin:0 0.3em 0.3em 0;
+    border-radius:2em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    color:#FFFFFF;
+    background-color:rgb(30, 187, 30);
+    text-align:center;
+    transition: all 0.2s;
+}
+
+a.bottone-paragone:hover {
+    background-color:rgb(30, 215, 30);
 }
