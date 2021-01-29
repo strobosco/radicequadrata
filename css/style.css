@@ -94,3 +94,7 @@ a.bottone-paragone {
 a.bottone-paragone:hover {
     background-color:#e9c59f;
 }
+
+#risultato {
+    color: #DDB992;
+}
