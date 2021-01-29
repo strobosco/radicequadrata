@@ -1,11 +1,10 @@
 body {
-    background-color: black;
+    background-color: #2B3145;
     font-family: Arial, Helvetica, sans-serif;
-    color: white;
 }
 
 h1, h2 {
-    color: rgb(30, 187, 30);
+    color: #DDB992;
 }
 
 div {
@@ -32,13 +31,13 @@ li {
 input {
     border: none;
     outline: none;
-    background-color: #ecebeb;
+    background-color: #e4e4e4;
     border-radius: 5px;
     width: fit-content;
 }
 
 button {
-    background-color:  rgb(30, 187, 30);
+    background-color: #DDB992;
     border: none;
     border-radius: 10px;
     color: white;
@@ -50,12 +49,13 @@ button {
 }
 
 button:hover {
-    background-color: rgb(30, 215, 30);
+    background-color: #e9c59f;
 }
 
 table, th, td {
     margin: auto;
-    border: 2px solid black;
+    border: 2px solid #3f465f;
+    color: #DDB992;
     border-collapse: collapse;
 }
 
@@ -86,11 +86,11 @@ a.bottone-paragone {
     font-family:'Roboto',sans-serif;
     font-weight:300;
     color:#FFFFFF;
-    background-color:rgb(30, 187, 30);
+    background-color: #DDB992;
     text-align:center;
     transition: all 0.2s;
 }
 
 a.bottone-paragone:hover {
-    background-color:rgb(30, 215, 30);
+    background-color:#e9c59f;
 }
