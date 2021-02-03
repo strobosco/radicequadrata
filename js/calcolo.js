@@ -1,82 +1,120 @@
+// Funzioni per le sezioni apribili
+
+function babiloneseCollapsible(){
+
+    var button = document.getElementsByClassName("collapsible");
+    button[0].classList.toggle("active");
+
+    var div = document.getElementsByClassName("babilonese-collapsible");
+    if(div[0].style.display == "block"){
+        div[0].style.display = "none";
+    } else {
+        div[0].style.display = "block";
+    }
+
+}
+
+function erroreCollapsible(){
+
+    var button = document.getElementsByClassName("collapsible");
+    button[1].classList.toggle("active");
+
+    var div = document.getElementsByClassName("errore-collapsible");
+    if(div[0].style.display == "block"){
+        div[0].style.display = "none";
+    } else {
+        div[0].style.display = "block";
+    }
+
+}
+
+function tangentiCollapsible(){
+
+    var button = document.getElementsByClassName("collapsible");
+    button[2].classList.toggle("active");
+
+    var div = document.getElementsByClassName("tangenti-collapsible");
+    if(div[0].style.display == "block"){
+        div[0].style.display = "none";
+    } else {
+        div[0].style.display = "block";
+    }
+
+}
+
+function inversoCollapsible(){
+
+    var button = document.getElementsByClassName("collapsible");
+    button[3].classList.toggle("active");
+
+    var div = document.getElementsByClassName("inverso-collapsible");
+    if(div[0].style.display == "block"){
+        div[0].style.display = "none";
+    } else {
+        div[0].style.display = "block";
+    }
+
+}
+
+
+//--------------------------------------------------------
+// Funzioni per il calcolo della radice
 const EPS = 0.00001;
 
-window.onload = function(){
-    alert("Algoritmo Ricorsivo non ancora integrato");
-}();
 
-function compute(){
-    radicando = document.getElementById("radicando").value; // get value of initial amount
+function Babilonese(){
 
-    // check if amount is positive, if not alert user and focus on amount input
+    radicando = document.getElementById("radicando-babilonese").value;
+
     if(radicando <= 0){
         alert("Inserire un radicando positivo: ")
-        document.getElementById("radicando").focus();
-    }
-    else{
-        ripetizioni = document.getElementById("ripetizioni").value; // get values of interest rate
+        document.getElementById("radicando-babilonese").focus();
+    } else {
 
-        metodo = document.getElementById("metodo").value;
+        ripetizioni = document.getElementById("ripetizioni-babilonese").value;
 
-        var radice;
-        if(metodo == "Metodo Babilonese"){
-            radice = Babilonese(radicando, ripetizioni);
-        }
-        if(metodo == "Metodo con controllo errore"){
-            radice = errore(radicando, ripetizioni);
-        }
-        if(metodo == "Algoritmo Ricorsivo"){
-            radice = ricorsivo(radicando, iterazioni)
-        }
-
-        // final statement that contains all necessary information
-        statement = "La radice approssimata e': " + radice;
-        document.getElementById("risultato"). innerHTML = statement;
-    }
-
-}
-
-function Babilonese(num, iterazioni){
-
-    var Q, Qprec, n;
-    n = 0;
-    Qprec = num / 2;
-    for(n = 0; n < iterazioni; n++){
-        Q = (Qprec + num / Qprec) / 2;
-        Qprec = Q;
-    }
-
-    return Q;
-
-}
-
-function errore(num, iterazioni){
-
-    var Q, Qprec, errore;
-    var n, esci = 0;
-    Qprec = num / 2;
-    for(n = 0; n < iterazioni && !esci; n++){
-        Q = (Qprec + num / Qprec) / 2;
-        errore = Math.abs((Q - Qprec) / Q);
-        if(errore < EPS) {
-            esci = 1;
-        } else {
+        var Q, Qprec, n;
+        n = 0;
+        Qprec = radicando / 2;
+        for(n = 0; n < ripetizioni; n++){
+            Q = (Qprec + radicando / Qprec) / 2;
             Qprec = Q;
         }
+
+        statement = "La radice approssimata e': " + Q;
+        document.getElementById("risultato-babilonese"). innerHTML = statement;
+
     }
-
-    return Q;
-
 }
 
-function ricorsivo(a, x1){ // algortimo ricorsivo da rivedere
+function Errore(){
 
-    if((Math.abs(x1 - a/x1) / 2) >= EPS ){
+    radicando = document.getElementById("radicando-errore").value;
 
-        x1 = (x1 + a/x1) / 2;
-        return radiceQuadrataErone(a, x1);
-
+    if(radicando <= 0){
+        alert("Inserire un radicando positivo: ")
+        document.getElementById("radicando-errore").focus();
     } else {
-        return x1;
-    }
 
+        ripetizioni = document.getElementById("ripetizioni-errore").value;
+
+        var Q, Qprec, errore;
+        var n, esci = 0;
+        Qprec = radicando / 2;
+        for(n = 0; n < ripetizioni && !esci; n++){
+            Q = (Qprec + radicando / Qprec) / 2;
+            errore = Math.abs((Q - Qprec) / Q);
+            if(errore < EPS) {
+                esci = 1;
+            } else {
+                Qprec = Q;
+            }
+        }
+
+        statement = "La radice approssimata e': " + Q;
+        document.getElementById("risultato-errore"). innerHTML = statement;
+    
+    }
 }
+
+// da definire tangenti e inverso
