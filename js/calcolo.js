@@ -118,3 +118,27 @@ function Errore(){
 }
 
 // da definire tangenti e inverso
+
+function Tangenti(){
+
+    radicando = document.getElementById("radicando-tangenti").value;
+
+    if(radicando <= 0){
+        alert("Inserire un radicando positivo: ")
+        document.getElementById("radicando-tangenti").focus();
+    } else {
+
+        ripetizioni = document.getElementById("ripetizioni-tangenti").value;
+
+        var volte = 0;
+        var x = 1.0;
+        for(volte = 0; volte <= ripetizioni; volte++){
+            x = (x / 2) + (radicando / (2 * x));
+        }
+
+        statement = "La radice approssimata e': " + x;
+        document.getElementById("risultato-tangenti"). innerHTML = statement;
+    
+    }
+
+}

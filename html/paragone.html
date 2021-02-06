@@ -13,22 +13,23 @@
 
         <div class="divparagone">
 
-            <h1>Paragone tra metodi approssimativi e funzione prestabilite</h1>
+            <h1>Paragoniamo I Metodi</h1>
 
             <input type="number" id="selezione" placeholder="Numero di confronti"> <br><br>
             <input type="number" id="iterazioni" placeholder="Iterazioni per calcolo"> <br><br>
             <input type="number" id="radicando" placeholder="Radicando"> <br><br>
 
-            <button onclick="tabella()">Paragona!</button>
+            <button onclick="tabella()" id="bottone-tabella">Paragona!</button>
             <br><br>
 
             <table id="tabella">
 
                 <thead>
                     <tr>
-                        <th>Iterazione</th>
                         <th>Babilonese</th>
                         <th>Errore</th>
+                        <th>Tangenti</th>
+                        <th>Inverso</th>
                         <th>sqrt()</th>
                     </tr>
                 </thead>
