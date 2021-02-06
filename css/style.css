@@ -30,19 +30,19 @@ h1, h2, span {
 
 table {
     position: relative;
-    width: 50%;
+    width: 80%;
     padding: 20px;
     top: 10px;
     margin: 10px auto;
     border-collapse: collapse;
     background-color: white;
-    color: black;
+    color: #DDB992;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;    
 }
 
 tbody, th, td {
-    border: 1.5px solid black;
+    border: 1.5px solid #2B3145;
     text-align: center;;
 }
 
@@ -83,6 +83,11 @@ tbody, th, td {
     background-color: #DDB992;
     text-align:center;
     transition: all 0.2s;
+}
+
+.divparagone {
+    min-height: fit-content;
+    min-width: fit-content;
 }
 
 #bottone-link, #bottone-paragone, #bottone-tabella {

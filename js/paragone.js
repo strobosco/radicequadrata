@@ -18,7 +18,7 @@ function Babilonese(num, iterazioni){
 
 }
 
-function errore(num, iterazioni){
+function Errore(num, iterazioni){
 
     var Q, Qprec, errore;
     var n, esci = 0;
@@ -37,16 +37,15 @@ function errore(num, iterazioni){
 
 }
 
-function ricorsivo(a, x1){ // algortimo ricorsivo da rivedere
+function Tangenti(num, iterazioni){
 
-    if((Math.abs(x1 - a/x1) / 2) >= EPS ){
-
-        x1 = (x1 + a/x1) / 2;
-        return radiceQuadrataErone(a, x1);
-
-    } else {
-        return x1;
+    var volte = 0;
+    var x = 1.0;
+    for(volte = 0; volte <= iterazioni; volte++){
+        x = (x / 2) + (num / (2 * x));
     }
+
+    return x;
 
 }
 
@@ -58,15 +57,21 @@ function tabella(){
     var radicando = document.getElementById("radicando").value;
 
     var table = document.getElementById("tabella");
-    document.getElementsByTagName("tbody").innerHTML="";
+
+    table.querySelectorAll("tbody").forEach((tbody, i ) => {
+        if(i == 0){
+            table.removeChild(tbody);
+        }
+    });
+
     var body = document.createElement('tbody');
 
     for(var i = 0; i < confronti; i++){
 
         var tr = document.createElement("tr");
-        for(var j = 0; j < 4; j++){
+        for(var j = 0; j < 5; j++){
 
-            if (i == (confronti) && j == 3) {
+            if (i == (confronti) && j == 4) {
                 break;
             }
             else {
@@ -85,11 +90,21 @@ function tabella(){
                         break;
                     
                     case 2:
-                        td.innerHTML = errore(radicando, iterazioni);
+                        td.innerHTML = Errore(radicando, iterazioni);
                         tr.appendChild(td);
                         break;
 
                     case 3:
+
+                        td.innerHTML = Tangenti(radicando, iterazioni);
+                        tr.appendChild(td);
+                    
+                    case 4:
+
+                        td.innerHTML = "Da compilare";
+                        tr.appendChild(td);
+
+                    case 5:
 
                         td.innerHTML = Math.sqrt(radicando);
                         tr.appendChild(td);
