@@ -50,7 +50,7 @@ function ricorsivo(a, x1){ // algortimo ricorsivo da rivedere
 
 }
 
-
+// This function prints the output for the comparisons
 function tabella(){
 
     var confronti = document.getElementById("selezione").value;
@@ -58,7 +58,13 @@ function tabella(){
     var radicando = document.getElementById("radicando").value;
 
     var table = document.getElementById("tabella");
-    document.getElementsByTagName("tbody").innerHTML="";
+    
+    table.querySelectorAll("tbody").forEach((tbody, i ) => {
+        if(i == 0){
+            table.removeChild(tbody);
+        }
+    });
+    
     var body = document.createElement('tbody');
 
     for(var i = 0; i < confronti; i++){
